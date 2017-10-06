@@ -32,10 +32,13 @@ class Solution:
       :type target: int
       :rtype: List[int]
       """
-      try: 
-        dict = {}
-        for i in range(len(nums)):
-          if target-nums[i] in dict:
-            return [i, dict[targ
+      try:
+          dict = {}
+          for i in range(len(nums)):
+              if target - nums[i] in dict:
+                  return [dict[target - nums[i]], i]
+              dict[nums[i]] = i
+      except:
+           "No two sum solution"
            
 ```
